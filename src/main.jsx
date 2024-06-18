@@ -1,10 +1,10 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import App from './App.jsx'
-import './index.css'
+import FlamesGen from './components/FlamesGen'
+import './css/FlamesGen.css'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <App />
+    <FlamesGen/>
   </React.StrictMode>,
 )
