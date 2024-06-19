@@ -31,7 +31,7 @@ const FlamesGen = () => {
 
     const [name1, setName1] = useState('');
     const [name2, setName2] = useState('');
-    const [finalString, setFinalString] = useState('Result Shown Here !!');
+    const [finalString, setFinalString] = useState('Result Appears Here !!');
     const [picture , setPicture] = useState(flamesPic)
 
     function passVal(e) {
