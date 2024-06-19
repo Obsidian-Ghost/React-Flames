@@ -81,7 +81,7 @@ const FlamesGen = () => {
             setPicture(sadImg)
             finString = (
                 <>
-                Please !! Enter Both Strings ...
+                Please !! Enter Both The Names ...
                 </>
             );
         }
@@ -91,7 +91,7 @@ const FlamesGen = () => {
             setPicture(sadImg)
             finString = (
                 <>
-                Please !! Enter a Valid String 
+                Please !! Enter a Valid Name. 
                 </>
             );
         }
