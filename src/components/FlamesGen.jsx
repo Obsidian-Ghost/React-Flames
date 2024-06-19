@@ -102,7 +102,7 @@ const FlamesGen = () => {
         else{
             finString = (
                 <>
-                    The Relationship Between <span style={{ color: 'blue' }}>{name1}</span> and <span style={{ color: 'blue' }}>{name2}</span> will end in <span style={{ color: 'red' }}>{res}</span>
+                    <span style={{ color: 'blue' }}>{name1}</span> and <span style={{ color: 'blue' }}>{name2}</span> are destined to be <span style={{ color: 'red' }}>{res}</span>
                 </>
             );
         }
