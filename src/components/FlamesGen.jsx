@@ -113,48 +113,6 @@ const FlamesGen = () => {
     }
 
 
-    // function flames(name1, name2) {
-    //     function countUniqueLetters(str1, str2) {
-    //         let combinedStr = str1 + str2;
-    //         let uniqueLetters = combinedStr.split('').filter((char, index, self) => {
-    //             return self.indexOf(char) === index;
-    //         });
-    //         return uniqueLetters.length;
-    //     }
-    
-    //     // Remove spaces and convert to lowercase
-    //     name1 = name1.replace(/\s+/g, '').toLowerCase();
-    //     name2 = name2.replace(/\s+/g, '').toLowerCase();
-    
-    //     let uniqueCount = countUniqueLetters(name1, name2);
-    //     let flamesArray = ['F', 'L', 'A', 'M', 'E', 'S'];
-    //     let resultIndex = uniqueCount % flamesArray.length - 1;
-    
-    //     if (resultIndex >= 0) {
-    //         flamesArray.splice(resultIndex, 1);
-    //     } else {
-    //         flamesArray.splice(flamesArray.length - 1, 1);
-    //     }
-    
-    //     let flamesResult = flamesArray[(uniqueCount % flamesArray.length) - 1];
-    
-    //     switch (flamesResult) {
-    //         case 'F':
-    //             return 'Friends';
-    //         case 'L':
-    //             return 'Lovers';
-    //         case 'A':
-    //             return 'Affectionate';
-    //         case 'M':
-    //             return 'Marriage';
-    //         case 'E':
-    //             return 'Enemies';
-    //         case 'S':
-    //             return 'Siblings';
-    //         default:
-    //             return 'No Match Found';
-    //     }
-    // }
     
     function flames(name1, name2) {
         name1 = name1.replace(/\s+/g, '').toUpperCase();
