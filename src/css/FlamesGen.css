@@ -12,7 +12,7 @@ body {
 }
 
 .overAllDiv {
-    box-shadow: 0 0 32px 7px #00ff08;
+    transition: box-shadow 0.3s ease-in-out;
     padding: 20px;
     width: 570px;
     border-radius: 40px;
