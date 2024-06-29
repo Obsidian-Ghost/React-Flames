@@ -157,10 +157,6 @@ const FlamesGen = () => {
 
     const dynamicStyle = {
         boxShadow: `0 0 32px 7px ${colors[currentColorIndex]}`,
-        padding: '20px',
-        width: '570px',
-        borderRadius: '40px',
-        maxWidth: '90%',
     };
 
     return (
