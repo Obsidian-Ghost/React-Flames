@@ -172,7 +172,7 @@ const FlamesGen = () => {
                 <input type="text" name="name2" id="name2" className="name2" onChange={passVal} />
             </div>
             <div className="submitButton">
-                <button onClick={generateFinal}>Find Destiny</button>
+                <button onClick={generateFinal}>Generate</button>
             </div>
             <div className="resultDiv">
                 <p>{finalString}</p>
