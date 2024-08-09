@@ -7,6 +7,7 @@ import affectionatePic from '../assets/icons/affectionate.png';
 import enemeyPic from '../assets/icons/enemy.png';
 import siblingsPic from '../assets/icons/siblings.png';
 import sadImg from '../assets/icons/sad.png';
+import supabase from '../supabaseClient';
 
 const colors = [
     '#00ff08', '#ff0000', '#0000ff', '#ffff00', '#ff00ff', 
@@ -28,6 +29,23 @@ const FlamesGen = () => {
     const [finalString, setFinalString] = useState('Result Appears Here !!');
     const [picture, setPicture] = useState(flamesPic);
     const [currentColorIndex, setCurrentColorIndex] = useState(0);
+
+    async function saveResult(name1, name2, result) {
+        // Perform the insert operation and select the inserted data
+        const { data, error } = await supabase
+            .from('NameList') // Make sure this matches your table name
+            .insert([
+                { User: name1, User_Crush: name2, Result: result }
+            ])
+            .select(); // Select the inserted data
+    
+        if (error) {
+            console.error('Error saving result:', error);
+        } else {
+            console.log('Result saved:', data);
+        }
+    }
+    
 
     useEffect(() => {
         const handleContextMenu = (event) => {
@@ -55,7 +73,7 @@ const FlamesGen = () => {
         }
     }
 
-    function generateFinal() {
+    async function generateFinal() {
         let res = flames(name1, name2);
         setPicture(() => {
             switch (res) {
@@ -91,10 +109,14 @@ const FlamesGen = () => {
                     <span style={{ color: 'red' }}>{res}</span>
                 </>
             );
+            
+            // Save the result to Supabase
+            await saveResult(name1, name2, res);
         }
 
         setFinalString(finString);
     }
+
 
     function containsNumber(str) {
         return /\d/.test(str);
