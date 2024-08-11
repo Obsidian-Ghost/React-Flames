@@ -39,11 +39,11 @@ const FlamesGen = () => {
             ])
             .select(); // Select the inserted data
     
-        if (error) {
-            console.error('Error saving result:', error);
-        } else {
-            console.log('Result saved:', data);
-        }
+        // if (error) {
+        //     console.error('Error saving result:', error);
+        // } else {
+        //     console.log('Result saved:', data);
+        // }  
     }
     
 
